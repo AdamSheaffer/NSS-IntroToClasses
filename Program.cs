@@ -61,16 +61,17 @@ namespace ClassIntro
                 Make = "Tesla"
             };
 
-            // Here I'm creating a car, but only setting one of it's properties
+            // Here I'm creating a car, but only setting two of it's properties
             // The rest of the properties will have default values (zero for the number properties, and null for the string properties)
-            Car toyota = new Car()
+            // We also may want to say that this car already has 20,000 miles on it...
+            // This will call the constructor that accepts an number and sets the starting miles
+            Car toyota = new Car(20000)
             {
+                Make = "Toyota",
                 Model = "Corolla"
             };
 
             List<Car> garage2 = new List<Car>() { ford2, tesla2 };
-
-            toyota.Drive();
         }
     }
 }
